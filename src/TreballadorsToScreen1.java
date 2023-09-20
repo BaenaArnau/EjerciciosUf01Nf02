@@ -5,15 +5,14 @@ public class TreballadorsToScreen1 {
         String[] lista;
         String conjunto;
         int cosa = 0;
-        int contador = 0;
+        int contador = 1;
 
         BufferedReader output = new BufferedReader(new FileReader("treballadors.txt"));
         try {
             conjunto = output.readLine();
-            while (conjunto != null) {
-                conjunto = output.readLine();
-                lista = conjunto.split(",");
-                System.out.println("TREBALLADOR" + (contador + 1));
+            lista = conjunto.split(",");
+            while (conjunto != null & lista.length >= cosa) {
+                System.out.println("TREBALLADOR" + (contador));
                 for (int i = 0; i < 3; i++){
                     System.out.println();
                     System.out.println(lista[cosa]);
